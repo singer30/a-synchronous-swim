@@ -1,6 +1,6 @@
-
-require('./js/keypressHandler').initialize();
-const handler = require('./js/httpHandler');
+const messageQueue = require('./js/messageQueue.js');
+require('./js/keypressHandler').initialize(messageQueue);
+const handler = require('./js/httpHandler').initialize(messageQueue);
 
 const http = require('http');
 const server = http.createServer(handler);

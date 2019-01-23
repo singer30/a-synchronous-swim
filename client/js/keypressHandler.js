@@ -6,5 +6,14 @@ $('body').on('keydown', (event) => {
     SwimTeam.move(direction.toLowerCase());
   }
 });
+$("button").on("click", (event) => {
+  $.get('http://127.0.0.1:3000'), (direction) => {
+    SwimTeam.move(direction);
+  }
+  });
 
-console.log('Client is running in the browser!');
+
+console.log('this is my target:',);
+
+
+
